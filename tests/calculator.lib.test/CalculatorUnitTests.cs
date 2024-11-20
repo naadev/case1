@@ -4,11 +4,15 @@ namespace calculator.lib.test
 {
     public class CalculatorUnitTests
     {
-        [Fact]
-        public void TestAdd()
+        [Theory]
+        [InlineData(3, 5, 8)]
+        [InlineData(-3, 5, 2)]
+        [InlineData(3, -5, -2)]
+        [InlineData(-3, -5, -8)]
+        public void TestAdd(int number1,int number2,int expectedResult)
         {
-            var result = Calculator.Add(2, 2);
-            Assert.Equal(4, result);
+            var result = Calculator.Add(number1, number2);
+            Assert.Equal(expectedResult, result);
         }
 
         [Fact]
