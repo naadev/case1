@@ -15,23 +15,36 @@ namespace calculator.lib.test
             Assert.Equal(expectedResult, result);
         }
 
-        [Fact]
-        public void TestSubstract()
+        [Theory]
+        [InlineData(3, 5, -2)]
+        [InlineData(-3, 5, -8)]
+        [InlineData(3, -5, 8)]
+        [InlineData(-3, -5, 2)]
+        public void TestSubstract(int number1, int number2, int expectedResult)
         {
-            var result = Calculator.Subtract(2, 2);
-            Assert.Equal(0, result);
+            var result = Calculator.Subtract(number1, number2);
+            Assert.Equal(expectedResult, result);
         }
-        [Fact]
-        public void TestMultiply()
+        [Theory]
+        [InlineData(3, 5, 15)]
+        [InlineData(-3, 5, -15)]
+        [InlineData(3, -5, -15)]
+        [InlineData(-3, -5, 15)]
+        public void TestMultiply(int number1, int number2, int expectedResult)
         {
-            var result = Calculator.Multiply(2, 2);
-            Assert.Equal(4, result);
+            var result = Calculator.Multiply(number1, number2);
+            Assert.Equal(expectedResult, result);
         }
-        [Fact]
-        public void TestDivide()
+        [Theory]
+        [InlineData(15, 3, 5)]
+        [InlineData(5, 2, 2.5)]
+        [InlineData(30, -5, -6)]
+        [InlineData(-30, -5, 6)]
+        public void TestDivide(int number1, int number2, double expectedResult)
         {
-            var result = Calculator.Divide(2, 2);
-            Assert.Equal(1, result);
+            var result = Calculator.Divide(number1, number2);
+            Assert.Equal(expectedResult, result);
         }
+
     }
 }
