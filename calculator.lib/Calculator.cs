@@ -12,7 +12,7 @@ namespace calculator.lib
             {
                 return number1 + number2;
             }
-            public static int Aubtract(int number1, int number2)
+            public static int Subtract(int number1, int number2)
             {
                 return number1 - number2;
             }
