@@ -10,7 +10,9 @@ namespace calculator.lib
     {
         public static bool IsPrime(int number)
         {
-            return number == 2;
+            if (number < 2) return false;
+            if (number == 2) return true;
+            return true;
         }
     }
 }
