@@ -39,5 +39,11 @@ namespace calculator.lib.test
             var isPrime = NumberAttributter.IsPrime(number);
             Assert.True(isItPrime == isPrime);
         }
+
+        [Fact]
+        public void test_a_large_number()
+        {
+            Assert.True(NumberAttributter.IsPrime(int.MaxValue));
+        }
     }
 }
