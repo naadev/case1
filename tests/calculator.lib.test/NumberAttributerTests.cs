@@ -8,6 +8,7 @@ namespace calculator.lib.test
         [InlineData(2, true)]
         [InlineData(1, false)]
         [InlineData(3, true)]
+        [InlineData(4, false)]
         public void Test_IsPrime(int number, bool isItPrime)
         {
             var isPrime = NumberAttributter.IsPrime(number);
