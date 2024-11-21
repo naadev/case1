@@ -25,6 +25,15 @@ namespace calculator.lib.test
         [InlineData(23, true)]
         [InlineData(24, false)]
         [InlineData(25, false)]
+        [InlineData(26, false)]
+        [InlineData(27, false)]
+        [InlineData(29, true)]
+        [InlineData(30, false)]
+        [InlineData(31, true)]
+        [InlineData(32, false)]
+        [InlineData(33, false)]
+        [InlineData(2197,false)] // 13^3
+        [InlineData(1009,true)]
         public void Test_IsPrime(int number, bool isItPrime)
         {
             var isPrime = NumberAttributter.IsPrime(number);
