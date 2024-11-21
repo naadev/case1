@@ -13,6 +13,7 @@ namespace calculator.lib
             if (number < 2) return false;
             if (number == 2) return true;
             if (number % 2 == 0) return false;
+            if (number % 3 == 0) return false;
             return true;
         }
     }
